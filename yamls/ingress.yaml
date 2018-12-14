@@ -1,0 +1,17 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: demo10
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 500m
+spec:
+  rules:
+  - host: demo10.default.vt.k8s-ws.net
+    http:
+      paths:
+      - backend:
+          serviceName: demo10
+          servicePort: 80
+
