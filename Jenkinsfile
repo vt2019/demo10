@@ -15,12 +15,14 @@ pipeline {
     stage('First stage') {
       steps {
         container('s2i') {
+          sh "mvn clean package"
         }
       }
     }
     stage('Second stage') {
       steps {
         container('s2i') {
+
         }
       }
     }
