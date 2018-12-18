@@ -12,7 +12,7 @@ pipeline {
     IMAGE_NAME        = "$DOCKER_REGISTRY/$ORG/$APP_NAME"
   }
   stages {
-    stage('First stage') {
+    stage('Compile Build JUnit Test Push Image') {
       steps {
         container('s2i') {
           sh "s2i build . pingworks/demo-builder:2 $IMAGE_NAME:$RELEASE_VERSION"
