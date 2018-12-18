@@ -24,6 +24,8 @@ pipeline {
       steps {
         container('s2i') {
 
+          
+
         }
       }
     }
