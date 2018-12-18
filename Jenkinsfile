@@ -20,7 +20,7 @@ pipeline {
         }
       }
     }
-    stage('Second stage') {
+    stage('ACPT Deploy and Testing') {
       steps {
         container('s2i') {
 
