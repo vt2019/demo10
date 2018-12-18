@@ -9,7 +9,7 @@ public class HomePageControllerTest {
 
 	@Test
 	public void testHome() {
-        
+        System.out.println("yo");
 	}
 
 }

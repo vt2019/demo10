@@ -17,13 +17,14 @@ pipeline {
         container('s2i') {
           sh "s2i build . pingworks/demo-builder:2 $IMAGE_NAME:$RELEASE_VERSION"
           sh "docker push $IMAGE_NAME:$RELEASE_VERSION" 
+          sh "echo 'hello' "
         }
       }
     }
     stage('ACPT Deploy and Testing') {
       steps {
         container('s2i') {
-          
+
         }
       }
     }
